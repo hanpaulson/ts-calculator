@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-let primaryColor = Color.init(red: 0, green: 116/255, blue: 178/255, opacity: 1.0)
+let primaryColor = Color("Orange")
 
 struct ContentView: View {
     
@@ -29,15 +29,15 @@ struct ContentView: View {
                 Text(self.finalValue)
                     .font(Font.custom("HelveticaNeue-Thin", size: 78))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                 Text(flattenTheExpression(exps: calExpression))
                     .font(Font.custom("HelveticaNeue-Thin", size: 24))
                     .frame(alignment: Alignment.bottomTrailing)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                 Spacer()
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .background(primaryColor)
+            .background(Color.white)
             VStack {
                 Spacer(minLength: 48)
                 VStack {
@@ -86,10 +86,10 @@ struct ContentView: View {
                     }
                 }
             }
-            .background(Color.black)
+            .background(Color("Mine Shaft"))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 414, maxHeight: .infinity, alignment: .topLeading)
         }
-        .background(Color.black)
+        .background(Color("Mine Shaft"))
         .edgesIgnoringSafeArea(.all)
     }
 }
@@ -99,7 +99,7 @@ func getBackground(str:String) -> Color {
     if checkIfOperator(str: str) {
         return primaryColor
     }
-    return Color.black
+    return Color("Mine Shaft")
 }
 
 func getFontSize(btnTxt: String) -> CGFloat {
