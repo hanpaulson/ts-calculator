@@ -30,6 +30,7 @@ struct ContentView: View {
                     .font(Font.custom("HelveticaNeue-Thin", size: 78))
                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                     .foregroundColor(Color.black)
+                    .accessibilityIdentifier("result_text")
                 Text(flattenTheExpression(exps: calExpression))
                     .font(Font.custom("HelveticaNeue-Thin", size: 24))
                     .frame(alignment: Alignment.bottomTrailing)
@@ -78,6 +79,7 @@ struct ContentView: View {
                                     .frame(idealWidth: 100, maxWidth: .infinity, idealHeight: 100, maxHeight: .infinity, alignment: .center)
                                 }
                                 )
+                                .accessibilityIdentifier(column)
                                 .foregroundColor(Color.white)
                                 .background(getBackground(str: column))
                                 .mask(CustomShape(radius: 40, value: column))
