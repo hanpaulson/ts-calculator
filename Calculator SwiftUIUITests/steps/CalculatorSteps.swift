@@ -13,80 +13,80 @@ class CalculatorSteps: BaseClass {
     let calculatorScreen = CalculatorScreen()
 
     func divisionByZero() {
-        calculatorScreen.tapNumberOneButton()
-        calculatorScreen.tapDivisionButton()
-        calculatorScreen.tapNumberZeroButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.one)
+        calculatorScreen.tapButton(.division)
+        calculatorScreen.tapButton(.zero)
+        calculatorScreen.tapButton(.equal)
     }
 
     func divideZeroByZero() {
-        calculatorScreen.tapNumberZeroButton()
-        calculatorScreen.tapDivisionButton()
-        calculatorScreen.tapNumberZeroButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.zero)
+        calculatorScreen.tapButton(.division)
+        calculatorScreen.tapButton(.zero)
+        calculatorScreen.tapButton(.equal)
     }
 
     func sumOperation() {
-        calculatorScreen.tapNumberTwoButton()
-        calculatorScreen.tapPlusButton()
-        calculatorScreen.tapNumberFiveButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.two)
+        calculatorScreen.tapButton(.addition)
+        calculatorScreen.tapButton(.five)
+        calculatorScreen.tapButton(.equal)
     }
 
     func subtractionOperationWithPositiveResult() {
-        calculatorScreen.tapNumberSixButton()
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberFiveButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.six)
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.five)
+        calculatorScreen.tapButton(.equal)
     }
 
     func subtractionOperationWithNegativeResult() {
-        calculatorScreen.tapNumberThreeButton()
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberNineButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.three)
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.nine)
+        calculatorScreen.tapButton(.equal)
     }
 
     func subtractionOperationStartingWithNegativeNumber() {
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberEightButton()
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberSixButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.eight)
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.six)
+        calculatorScreen.tapButton(.equal)
     }
 
     func muliplicationOperation() {
-        calculatorScreen.tapNumberThreeButton()
-        calculatorScreen.tapMultiplicationButton()
-        calculatorScreen.tapNumberNineButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.three)
+        calculatorScreen.tapButton(.multiplication)
+        calculatorScreen.tapButton(.nine)
+        calculatorScreen.tapButton(.equal)
     }
 
     func decimalOperation() {
-        calculatorScreen.tapNumberFiveButton()
-        calculatorScreen.tapPointButton()
-        calculatorScreen.tapNumberFiveButton()
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberOneButton()
-        calculatorScreen.tapPointButton()
-        calculatorScreen.tapNumberOneButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.five)
+        calculatorScreen.tapButton(.point)
+        calculatorScreen.tapButton(.five)
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.one)
+        calculatorScreen.tapButton(.point)
+        calculatorScreen.tapButton(.one)
+        calculatorScreen.tapButton(.equal)
     }
 
     func numberWithTwoDecimalsOperation() {
-        calculatorScreen.tapNumberEightButton()
-        calculatorScreen.tapPointButton()
-        calculatorScreen.tapNumberSixButton()
-        calculatorScreen.tapNumberSixButton()
-        calculatorScreen.tapSubtractionButton()
-        calculatorScreen.tapNumberTwoButton()
-        calculatorScreen.tapPointButton()
-        calculatorScreen.tapNumberOneButton()
-        calculatorScreen.tapNumberOneButton()
-        calculatorScreen.tapEqualButton()
+        calculatorScreen.tapButton(.eight)
+        calculatorScreen.tapButton(.point)
+        calculatorScreen.tapButton(.six)
+        calculatorScreen.tapButton(.six)
+        calculatorScreen.tapButton(.subtraction)
+        calculatorScreen.tapButton(.two)
+        calculatorScreen.tapButton(.point)
+        calculatorScreen.tapButton(.one)
+        calculatorScreen.tapButton(.one)
+        calculatorScreen.tapButton(.equal)
     }
 
     func validateCalculatorResult(_ text: String) {
-        XCTAssertEqual(calculatorScreen.getResultText, text)
+        XCTAssertEqual(calculatorScreen.getOperationResult, text)
     }
 }

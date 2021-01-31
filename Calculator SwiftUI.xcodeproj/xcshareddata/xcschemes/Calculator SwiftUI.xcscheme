@@ -49,6 +49,12 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "BaseClass">
+               </Test>
+               <Test
+                  Identifier = "CalculatorSteps">
+               </Test>
+               <Test
                   Identifier = "Calculator_SwiftUIUITests/testSubtractionOperationStartingWithNegativeNumber()">
                </Test>
             </SkippedTests>
