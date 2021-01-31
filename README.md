@@ -1,6 +1,6 @@
 ## Calculator UI Tests
 
-![UI Tests](https://github.com/luuizeduardo/ts-calculator-ios/workflows/.github/workflows/swift.yml/badge.svg)
+![UI Tests](https://github.com/luuizeduardo/ts-calculator-ios/workflows/Swift/badge.svg)
 
 This project tests the Calculator app in the UI level.
 
