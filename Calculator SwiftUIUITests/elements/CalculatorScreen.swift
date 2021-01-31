@@ -31,7 +31,6 @@ class CalculatorScreen {
         case point = "."
         case equal = "="
         case result = "result_text"
-
     }
 
     // MARK: Actions
